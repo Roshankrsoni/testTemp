@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const compression = require('compression');
+var ReactDOMServer = require('react-dom/server');
 
 module.exports = function addProdMiddlewares(app, options) {
   const publicPath = options.publicPath || '/';
@@ -13,6 +14,6 @@ module.exports = function addProdMiddlewares(app, options) {
   app.use(publicPath, express.static(outputPath));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(outputPath, 'index.html')),
+    res.sendFile(path.resolve(outputPath, ReactDOMServer.renderToStaticNodeStream('index.html'))),
   );
 };
