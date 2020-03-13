@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-let brandsName = 'Asort';
- 
+const brandsName = 'Asort';
+
+// eslint-disable-next-line react/prefer-stateless-function
 export class index extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="about">

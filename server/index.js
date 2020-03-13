@@ -1,8 +1,9 @@
 /* eslint consistent-return:0 import/order:0 */
 
 const express = require('express');
+const path = require('path');
 const logger = require('./logger');
-
+var compression = require('compression');
 const argv = require('./argv');
 const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
@@ -12,10 +13,26 @@ const ngrok =
     ? require('ngrok')
     : false;
 const { resolve } = require('path');
+const rateLimit = require("express-rate-limit");
 const app = express();
 
+app.use(compression());
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
+
+
+const pingsLimiter = rateLimit({
+  windowMs: 1 * 1 * 1000, // 1 second
+  max: 1
+});
+
+app.use("/ping", pingsLimiter, (req, res) => {
+  res.status(200).json({
+    status: 200,
+    message: `Maloka web server is live`
+  })
+});
+app.use('/assets', express.static(path.resolve(process.cwd(), 'assets')));
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {

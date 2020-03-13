@@ -1,0 +1,10 @@
+.ant-collapse {
+    background-color: #fff!important;
+}
+
+.faq a {
+    margin: 0;
+    text-transform: uppercase;
+    color: #23566d;
+    text-decoration: none;
+}
