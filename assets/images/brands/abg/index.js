@@ -1,0 +1,1 @@
+export const WomenImg = require('./Look.jpg')

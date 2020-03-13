@@ -1,0 +1,6 @@
+@media (max-width: 480px) { 
+  .ds-asort-product-list-container .product-grid-item.product-small .product-grid-item-images {
+      max-height: 379px;
+      border-radius: 20px 20px 0 0; 
+  }
+}

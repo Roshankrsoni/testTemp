@@ -1,3 +1,4 @@
+import { BASIC_AUTH } from '../api_constants';
 /**
  * Parses the JSON returned by a network request
  *
@@ -37,8 +38,68 @@ function checkStatus(response) {
  *
  * @return {object}           The response data
  */
-export default function request(url, options) {
+export default function request(url, opts) {
+  const options = Object.assign({}, opts);
+  if (!options) {
+    options = {};
+  }
+
+  options.url = url;
+  // if (!options.credentials) {
+  //   options.credentials = 'include';
+  // }
+
+  if (!options.headers) {
+    options.headers = {
+      'Accept': 'application/json',
+      'Content-type': 'application/json; charset=utf-8',
+    };
+    if (options.formdata) {
+      options.headers = {};
+    }
+  }
+  const accessToken = localStorage.getItem('accessToken');
+  let authHeader = '';
+  if (accessToken && accessToken.length > 1) {
+    if (options.headers && !options.headers.Authorization) {
+      options.headers.Authorization = `Bearer ${accessToken}`;
+      authHeader = options.headers.Authorization;
+    }
+  } else {
+    options.headers.Authorization = `Basic ${BASIC_AUTH}`;
+  }
+
+  if (options.body && typeof (options.body) !== 'string') {
+    options.body = JSON.stringify(options.body);
+  }
+
+  if (options.formdata) {
+    const formdata = options.formdata;
+    const filedata = new FormData();
+    const keys = Object.keys(options.formdata);
+
+    keys.forEach((item) => {
+      if (formdata[item]) {
+        filedata.append(item, formdata[item]);
+      }
+    });
+    if (!options.method) {
+      options.method = 'post';
+    }
+    options.body = filedata;
+    options.credentials = 'include';
+  }
+  if (options.emptyHeader) {
+    delete options.headers;
+    delete options.credentials;
+  }
+
   return fetch(url, options)
     .then(checkStatus)
-    .then(parseJSON);
+    .then((res) => {
+      if (options.isBlob) {
+        return res.blob();
+      }
+      return parseJSON(res);
+    })
 }

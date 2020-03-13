@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Helmet } from 'react-helmet';
 
-let title_head = 'Asort';
+const titleHead = 'Asort';
 
-export class index extends Component {
+// eslint-disable-next-line react/prefer-stateless-function
+export class index extends PureComponent {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <section className="about team">
@@ -15,7 +20,7 @@ export class index extends Component {
           />
         </Helmet>
         <div className="banner">
-          <h2 className="banner-text">We are {title_head}</h2>
+          <h2 className="banner-text">We are {titleHead}</h2>
         </div>
         <div className="title">
           <h3>our team</h3>
@@ -24,18 +29,18 @@ export class index extends Component {
           <div className="topic">
             <img src="https://cdn.asort.com/resources/images/chat.png" alt="" />
             <p>
-              {title_head} is proudly built in India, by a team driven by a
+              {titleHead} is proudly built in India, by a team driven by a
               passion to change the way e-commerce is being run.
             </p>
           </div>
           <div className="topic">
             <img src="https://cdn.asort.com/resources/images/hq.png" alt="" />
             <p>
-              We are driven to design a fashion marketplace where {title_head}{' '}
+              We are driven to design a fashion marketplace where {titleHead}{' '}
               members can not only buy the highest quality products at
               affordable prices but also create a platform where every member
               gets rewarded in cash and personalized experiences for their
-              contribution to building the {title_head} community.
+              contribution to building the {titleHead} community.
             </p>
           </div>
           <div className="topic">
@@ -55,7 +60,7 @@ export class index extends Component {
               alt=""
             />
             <p>
-              The {title_head} leadership team has a combined experience of over
+              The {titleHead} leadership team has a combined experience of over
               two hundred years across multiple domains like fashion,
               e-commerce, technology, direct sales, logistics, product design,
               and finance.
@@ -64,7 +69,7 @@ export class index extends Component {
           <div className="topic">
             <img src="https://cdn.asort.com/resources/images/run.png" alt="" />
             <p>
-              At {title_head} we strive to encourage everyone to move fast, to
+              At {titleHead} we strive to encourage everyone to move fast, to
               innovate,to try out new ideas, and break and build new things.
             </p>
           </div>
