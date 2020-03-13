@@ -1,9 +1,0 @@
-export { default as AbgBrand } from './brands_ABG';
-export { default as AmiigaBrand } from './brands_amiiga';
-export { default as AsortOriginals } from './brands_asortoriginals';
-export { default as EarthlyScent } from './brands_earthlyscent';
-export { default as Haul } from './brands_haul';
-export { default as Huffman } from './brands_huffman';
-export { default as Ifazone } from './brands_ifazone';
-export { default as Kuefit } from './brands_kuefit';
-export { default as Solasta } from './brands_solasta';
