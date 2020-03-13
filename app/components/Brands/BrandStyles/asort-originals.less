@@ -1,0 +1,92 @@
+/**/
+.asort-originals-pageWrp {
+  display: block; 
+  margin: 0 auto;
+  margin-bottom: 40px; 
+  width: 1250px; 
+  max-width: 100%;
+
+.item1 {width: 100%; height:auto;}
+
+.item1 > img{max-width: 100%; height:auto;}
+
+.item2 { grid-area: left; }
+
+.item3 { grid-area: right; }
+
+.item4 { grid-area: left;}
+
+.item5 { grid-area: right;  }
+
+.grid-container > div a img{ padding-top: 1vw !important; }
+
+.grid-container-2 > div a img{ padding-top: 1vw !important; }
+
+#homegrid >div {position: relative;}
+
+.grid-container > div img{ width: 100%; height: auto;}
+
+.grid-container-2 > div img{ width: 100%; height: auto;}
+
+.grid-container {
+ grid-template-columns: 500px 500px;
+ grid-template-rows: auto auto;
+  display: grid;
+  grid:
+    'left right';
+  grid-gap:1vw;
+  padding: 2vw 0vw 0vw 0vw;
+  position: relative;
+}
+.grid-container-2 {
+  grid-template-columns: 500px 500px;
+  grid-template-rows: auto auto;
+   display: grid;
+   grid:
+     'left right';
+   grid-gap:1vw;
+   padding: 2vw 0vw 0vw 0vw;
+   position: relative;
+ }
+
+}
+
+@media screen and (max-width: 448px)
+{
+  .asort-originals-pageWrp {
+    display: block; 
+    margin: 0 auto; 
+    width: 1440px; 
+    max-width: 100%;
+
+  .item1 > img{ display: block; margin-bottom: 1vw;}
+
+  .pageWrp #homegrid > div { margin-bottom: 0vw; padding: 0vw; }
+
+  .grid-container { display: block; padding: 0vw 0vw 2vw 0vw !important; }
+
+  .grid-container > div a span{bottom: 10vw !important; width: 48vw !important; font-size: 3vw !important; padding: 1vw 0vw 1vw 0vw!important; margin-left: -24vw !important;}
+
+  .grid-container-2 { display: block; padding: 0vw 0vw 2vw 0vw !important; }
+
+  .grid-container-2 > div a span{bottom: 10vw !important; width: 48vw !important; font-size: 3vw !important; padding: 1vw 0vw 1vw 0vw!important; margin-left: -24vw !important;}
+  }
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 448px)
+{
+  .asort-originals-pageWrp {
+  #homegrid > div { margin-bottom: 0vw; padding: 0vw; }
+
+  .item3 { padding: 0vw; }
+
+  .grid-container { padding:1vw 0vw 0vw 0vw; grid-gap: 1vw;}
+
+  .grid-container > div a span{bottom: 4vw !important;}
+
+  .grid-container-2 { padding:1vw 0vw 0vw 0vw; grid-gap: 1vw;}
+
+  .grid-container-2 > div a span{bottom: 4vw !important;}
+  }
+}

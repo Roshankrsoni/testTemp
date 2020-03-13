@@ -1,0 +1,19 @@
+.container-fluid-sm{
+    padding: 20px;
+}
+.empty-view-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: #ABABAB;
+    font-size: 2em;
+  }
+
+  .empty-view-message .anticon{
+      display: unset !important;
+  }
+.fa{
+    display: block;
+}

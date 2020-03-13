@@ -1,0 +1,558 @@
+@import "../../stylesheets/main.less";
+.rui.navbar {
+  // filter: invert(100%);
+  background-color: #DDD;
+  color: grey!important;
+}
+.cart-icon {
+  background-color: #DDD;
+  color: grey;
+}
+.cart-icon:hover {
+  background-color: grey;
+  color: #DDD;
+}
+.cart-icon .badge {
+  background-color: grey;
+  color: #DDD;
+}
+
+.cart-icon:hover .badge {
+  background-color: #DDD;
+  color: grey;
+}
+
+.sf-menu {
+    float: left;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.sf-menu {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sf-menu .sf-mega {
+    box-shadow: 2px 3px 6px rgba(0,0,0,.2);
+    width: 100%;
+}
+.sf-menu .sf-mega .row {
+    padding: 20px;
+}
+
+.sf-menu > li {
+    float: left;
+    padding: 20px 0;
+    @media(max-width: 1023px) {
+        padding: 15px 0;
+    }
+}
+.sf-menu > li > a {
+    border-left: 1px solid #fff;
+    border-top: 1px solid #dFeEFF;
+    border-top: 1px solid rgba(255,255,255,.5);
+    padding: .75em 1em;
+    text-decoration: none;
+    zoom: 1;
+    color: #13a;
+}
+.sf-menu > li > a {
+    display: block;
+    position: relative;
+}
+.sf-menu .sf-mega {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: -32%;
+    z-index: 99;
+    width: 96vw;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.sf-menu > li:hover .sf-mega {
+  display: block;
+}
+
+.my-nodrop:hover, .my-dropbtn:hover {
+  color: #fd9b57 !important;
+}
+
+.sf-menu li.active:after, .sf-menu li.active:before {
+	bottom: 0%;
+  margin-bottom: -2px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.sf-menu li.active:after {
+	border-bottom-color: #fff;
+	border-width: 15px;
+	margin-left: -16px;
+  z-index: 999;
+}
+.sf-menu li.active:before {
+	border-bottom-color: #e0e0e0;
+	border-width: 17px;
+	margin-left: -18px;
+  z-index: 1;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    text-transform: none !important;
+}
+
+.column .activelink, .column a:hover {
+    color: #fd9b57 !important;
+    background-color: #f2f2f2 !important;
+}
+
+.shopbyproduct-wrapper {
+  min-height: 266px !important;
+  background-color: #f2f2f2;
+}
+
+.category-wrapper {
+  padding: 0 !important;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.occasion-image {
+  height: 225px;
+}
+
+.occasion-wrapper-item {
+  float: left;
+  position: relative;
+}
+
+.occasion-wrapper-item a {
+  position: absolute;
+  bottom: 5%;
+  width: 80%;
+  background: #fff;
+  margin: auto;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  padding: 10px !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  text-align: center !important;
+}
+
+.level-title-wrapper {
+  text-align: left;
+  margin: 15px;
+  width: 60%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.level-title-wrapper span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.quantity-edit-wrapper {
+  margin: 10px 0 0 0;
+}
+
+.qty-update-btn {
+  float: left;
+  margin-top: 5px;
+  padding: 1px 15px 1px 15px !important;
+  background-color: #fd724e !important;
+  border-color: #fd724e !important;
+  color: #fff !important;
+}
+
+#add-cart-quantity-input {
+  width: 20%;
+  float: right;
+  height: 50px;
+}
+
+#sideMenubar .item > div {
+  position: relative;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.submenu-link {
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-left: 5px;
+  padding: 0 !important;
+  border-bottom: 2px solid #a9a9a9 !important;
+}
+.down-arrow {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translate(0,-50%);
+  cursor: pointer;
+}
+
+.down-arrow::before {
+    float: right;
+    content: '\f054';
+    font-family: 'FontAwesome';
+}
+
+.active .down-arrow::before {
+    float: right;
+    content: '\f078';
+    font-family: 'FontAwesome';
+}
+
+
+.occasion-image-mob {
+  height: 60px;
+}
+
+.shopbyproduct-wrapper > a
+{
+		font-weight: 400;
+}
+
+.occasion-image {
+     height: auto;
+    max-width: 100%;
+}
+
+.item3-pad {
+    padding: 10px 0px !important;
+}
+
+.item4-pad {
+    padding: 5px 0px;
+}
+
+.item6-pad {
+    padding: 7px 0px;
+}
+
+/*********************
+ Mobile menu start
+ *********************/
+@media screen and (max-width :768px) {
+
+  .sideBarlabel
+  {
+
+  	font-size: 11px;
+  	padding : 22px 0px 0px 10px;
+  	font-family: 'Titillium Web';
+  	font-weight: 500;
+    	font-style: normal;
+    	font-stretch: extra-expanded;
+    	line-height: normal;
+    	letter-spacing: normal;
+    	color: #9b9b9b;
+  }
+
+
+
+  #sideMenubar .item .title
+  {
+  	font-family: 'Titillium Web';
+      padding: 18px 0px 18px 10px !important;
+      border-bottom: none !important;
+      font-weight: 600;
+      margin: 0px;
+      font-size: 13px;
+
+  }
+
+  #sideMenubar .item:before {
+      background: #e8e8e8;
+      height: 0.8px;
+  }
+
+  #sideMenubar .item .down-arrow, #sideMenubar .item .active .down-arrow {
+      position: absolute;
+      padding: 15px !important;
+      cursor: pointer;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(10%, -50%);
+      font-style: normal;
+      font-size: 10px;
+  }
+
+  #sideMenubar .item .down-arrow::before {
+      float: right;
+      content: '\f054';
+      font-family: 'FontAwesome';
+  }
+
+  #sideMenubar .item .active .down-arrow::before {
+      float: right;
+      content: '\f078';
+      font-family: 'FontAwesome';
+  }
+
+  #sideMenubar .item .content .title
+  {
+  	font-size: 11px;
+  	color: #474646;
+  	font-style: normal;
+  	font-weight: 600;
+  	letter-spacing: normal;
+  	text-transform: none;
+
+  }
+
+  #sideMenubar .item .content .content > div a
+  {
+  	font-size: 11px !important;
+  	color: #474646;
+  	font-style: normal;
+  	font-weight: normal;
+  	letter-spacing: normal;
+  	padding: 16px 0px 16px 44px !important;
+    	font-style: normal;
+    	font-stretch: normal;
+    	text-transform: none;
+
+  }
+
+  #sideMenubar .item .content .content-hot-categories > div a
+  {
+  	font-size: 11px !important;
+  	color: #474646;
+  	font-style: normal;
+  	font-weight: normal;
+  	letter-spacing: normal;
+  	padding: 16px 0px 16px 44px !important;
+    	font-style: normal;
+    	font-stretch: normal;
+    	text-transform: none;
+
+  }
+
+  #sideMenubar .item .content .content > div h4
+  {
+  	font-size: 11px !important;
+  	color: #474646;
+  	font-style: normal;
+  	font-weight: bold;
+  	letter-spacing: normal;
+  	padding: 16px 0px 16px 25px !important;
+  	position: relative;
+    	font-style: normal;
+    	font-stretch: normal;
+
+  }
+
+  #sideMenubar .item .content .content-hot-categories > div h4
+  {
+  	font-size: 11px !important;
+  	color: #474646;
+  	font-style: normal;
+  	font-weight: bold;
+  	letter-spacing: normal;
+  	padding: 16px 0px 16px 25px !important;
+  	position: relative;
+    	font-style: normal;
+    	font-stretch: normal;
+
+  }
+
+  #sideMenubar .item .content .content > div h4:after
+  {
+  	border-bottom: 1.5px solid #474646;
+
+  	height: 0px;
+
+  	display : block;
+
+  	content:'';
+  position: absolute;
+  bottom: 10px;
+  width: 94px;
+
+  }
+
+  #sideMenubar .item .content .content-hot-categories > div h4:after
+  {
+  	border-bottom: 1.5px solid #474646;
+
+  	height: 0px;
+
+  	display : block;
+
+  	content:'';
+  position: absolute;
+  bottom: 10px;
+  width: 94px;
+
+  }
+
+  #sideMenubar .item .content .content .catalogue1 > div{
+
+    text-align: center;
+    position: relative;
+}
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1 > div{
+
+      text-align: center;
+      position: relative;
+  }
+
+  #sideMenubar .item .content .content .catalogue1
+  {
+  	display: grid;
+      grid-area: catalogue1;
+      grid-template-columns: 50% 50%;
+      grid-gap: 5px;
+      margin: 0px 21px 10px 24px;
+      border-top: 0px !important;
+  }
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1
+  {
+  	display: grid;
+      grid-area: catalogue1;
+      grid-template-columns: 50% 50%;
+      grid-gap: 5px;
+      margin: 0px 21px 10px 24px;
+      border-top: 0px !important;
+  }
+
+  #sideMenubar .item .content .content .catalogue1 > div:before{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    right: 0px;
+    bottom : 0px;
+    content: '';
+    background: rgba(0 , 0 , 0 , 0.5);
+    pointer-events: none;
+  }
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1 > div:before{
+      position: absolute;
+      top: 0px;
+      left:0px;
+      right: 0px;
+      bottom : 0px;
+      content: '';
+      background: rgba(0 , 0 , 0 , 0.5);
+      pointer-events: none;
+  }
+
+  #sideMenubar .item .content .content .catalogue1 > div span{
+    position: absolute;
+
+   z-index: 1;
+   width: 100%;
+   left: 0px;
+   text-align: center;
+   top: 50%;
+   margin-top: -5px;
+  }
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1 > div span{
+       position: absolute;
+
+      z-index: 1;
+      width: 100%;
+      left: 0px;
+      text-align: center;
+      top: 50%;
+      margin-top: -5px;
+  }
+  #sideMenubar .item .content .content .catalogue1 img{max-width: 100%; height: auto;}
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1 img{max-width: 100%; height: auto;}
+
+  #sideMenubar .item .content .content-hot-categories .catalogue1 > div a
+  {
+  	font-size: 10px !important;
+  	color: #fff;
+  	font-style: normal;
+  	font-weight: normal;
+  	letter-spacing: normal;
+  	padding: 0px!important;
+    	font-stretch: normal;
+    	font-size: 10px;
+    	font-weight: 500;
+    	line-height: normal;
+    	font-family: Titillium Web;
+
+
+  }
+
+  #sideMenubar .item .content .content .catalogue1 > div a
+  {
+  	font-size: 10px !important;
+  	color: #fff;
+  	font-style: normal;
+  	font-weight: normal;
+  	letter-spacing: normal;
+  	padding: 0px!important;
+    	font-stretch: normal;
+    	font-size: 10px;
+    	font-weight: 500;
+    	line-height: normal;
+    	font-family: Titillium Web;
+  }
+
+  #sideMenubar .item .content > div a {
+      padding: 18px 0px 18px 32px !important;
+  }
+
+  #sideMenubar .item .content > div a .title {
+      padding: 18px 0px 18px 32px !important;
+  }
+
+  #sideMenubar .item .content{
+
+      margin-bottom: 0px !important;
+      padding: 0px !important;
+  }
+
+  #sideMenubar .item .content .down-arrow {
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(10%, -50%);
+      font-style: normal;
+      font-size: 8px;
+  }
+}
+
+/*******************
+Mobile Menu Ends Here
+********************/
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+}
